@@ -1,0 +1,50 @@
+@import "../../../utilities/mixins";
+@import "../../../utilities/variables";
+
+.register {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem 0;
+
+  .register-text {
+    padding: 2rem;
+  }
+  .register-action {
+    padding: 1rem;
+    width: 30%;
+
+    .register-action-form {
+      input {
+        @include input-text;
+      }
+      button {
+        @include primary-button;
+        padding: 10px;
+        width: 100%;
+        margin-top: 2rem;
+      }
+      .msg {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+      }
+      .success-msg {
+        color: $success;
+      }
+      .error-msg {
+        color: $warning;
+      }
+    }
+  }
+}
+@media (max-width: 660px) {
+  .register {
+    .register-text {
+      text-align: center;
+    }
+    .register-action {
+      width: 70%;
+    }
+  }
+}
